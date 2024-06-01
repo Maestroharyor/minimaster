@@ -24,6 +24,18 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('post/<slug:slug>/', views.post, name='post'),
     path('category/<slug:slug>/', views.category, name='category'),
+    path('tag/<slug:slug>/', views.tag, name='tag'),
+    path('signup/', views.signup, name='signup'),
+    path('login/', views.login, name='login'),
+    path('logout/', views.logout, name='logout'),
+    path('reset-password/', views.reset_password, name='reset_password'),
+    path('change-password/', views.change_password, name='change_password'),
+    path('dashboard/', views.dashboard, name='dashboard'),
+    path('/dashboard/add-post/', views.add_post, name='add_post'),
+    path('/dashboard/edit-post/<slug:slug>/',
+         views.edit_post, name='edit_post'),
+    path('about', views.about),
+    path('contact', views.contact),
     path('', views.blog),
 ]
 

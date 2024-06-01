@@ -13,6 +13,10 @@ def category(request, slug):
     return render(request, 'minimaster/category.html')
 
 
+def tag(request, slug):
+    return render(request, 'minimaster/tag.html')
+
+
 def post(request, slug):
     data = Post.objects.get(slug=slug)
     return render(request, 'minimaster/post.html', {'post': data})
@@ -30,12 +34,16 @@ def edit_post(request):
     return render(request, 'minimaster/edit_post.html')
 
 
-def sign_up(request):
-    return render(request, 'minimaster/sign_up.html')
+def signup(request):
+    return render(request, 'minimaster/signup.html')
 
 
-def sign_in(request):
-    return render(request, 'minimaster/sign_in.html')
+def login(request):
+    return render(request, 'minimaster/login.html')
+
+
+def logout(request):
+    return HttpResponse('Logout')
 
 
 def reset_password(request):
