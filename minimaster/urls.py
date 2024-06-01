@@ -42,3 +42,11 @@ urlpatterns = [
 if settings.DEBUG:  # Serve media files during development
     urlpatterns += static(settings.MEDIA_URL,
                           document_root=settings.MEDIA_ROOT)
+
+# TODO: Fix Image upload and static files
+
+# TODO: Add partials
+
+# TODO: Add all html markups
+
+# TODO: Fix blog/home page
