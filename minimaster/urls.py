@@ -31,17 +31,15 @@ urlpatterns = [
     path('reset-password/', views.reset_password, name='reset_password'),
     path('change-password/', views.change_password, name='change_password'),
     path('dashboard/', views.dashboard, name='dashboard'),
-    path('/dashboard/add-post/', views.add_post, name='add_post'),
-    path('/dashboard/edit-post/<slug:slug>/',
+    path('dashboard/add-post/', views.add_post, name='add_post'),
+    path('dashboard/edit-post/<slug:slug>/',
          views.edit_post, name='edit_post'),
     path('about', views.about),
     path('contact', views.contact),
     path('', views.blog),
 ]
 
-if settings.DEBUG:  # Serve media files during development
-    urlpatterns += static(settings.MEDIA_URL,
-                          document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # TODO: Fix Image upload and static files
 

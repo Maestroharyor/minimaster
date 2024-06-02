@@ -18,8 +18,8 @@ def tag(request, slug):
 
 
 def post(request, slug):
-    data = Post.objects.get(slug=slug)
-    return render(request, 'minimaster/post.html', {'post': data})
+    post = Post.objects.get(slug=slug)
+    return render(request, 'minimaster/post.html', {'post': post})
 
 
 def dashboard(request):
